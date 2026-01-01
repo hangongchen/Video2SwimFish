@@ -1,0 +1,77 @@
+params:
+  # PPO config for the RAW PER-JOINT baseline on the 10-target protocol
+  # (Template-Salmon-Reach10-Joint-Misty-Direct-v0). Identical task/reward/episode length to
+  # rl_games_ppo_reach10_pca_cfg.yaml; only the controller (action space) differs, so the
+  # network capacity below is kept THE SAME as that file for a fair comparison.
+  seed: 42
+
+  env:
+    clip_observations: 5.0
+    clip_actions: 1.0
+
+  algo:
+    name: a2c_continuous
+
+  model:
+    name: continuous_a2c_logstd
+
+  network:
+    name: actor_critic
+    separate: False
+    space:
+      continuous:
+        mu_activation: None
+        sigma_activation: None
+        mu_init:
+          name: default
+        sigma_init:
+          name: const_initializer
+          val: -0.5
+        fixed_sigma: True
+    mlp:
+      # same capacity as the PCA/CPG Reach10 baselines (fair comparison)
+      units: [128, 64]
+      activation: elu
+      d2rl: False
+      initializer:
+        name: default
+      regularizer:
+        name: None
+
+  load_checkpoint: False
+  load_path: ''
+
+  config:
+    name: fish_traj_follow_joint
+    env_name: rlgpu
+    device: 'cuda:0'
+    device_name: 'cuda:0'
+    multi_gpu: False
+    ppo: True
+    mixed_precision: False
+    normalize_input: True
+    normalize_value: True
+    num_actors: -1
+    reward_shaper:
+      scale_value: 1.0
+    normalize_advantage: True
+    gamma: 0.99
+    tau: 0.95
+    learning_rate: 3e-4
+    lr_schedule: adaptive
+    kl_threshold: 0.008
+    score_to_win: 1000000
+    max_epochs: 2000
+    save_best_after: 10
+    save_frequency: 10   # 2026-09-28: peaks are followed by decay; keep a ckpt within 5 epochs of the best-completion epoch
+    grad_norm: 1.0
+    entropy_coef: 0.003
+    truncate_grads: True
+    e_clip: 0.2
+    horizon_length: 256
+    minibatch_size_per_env: 32
+    mini_epochs: 5
+    critic_coef: 4
+    clip_value: True
+    seq_length: 4
+    bounds_loss_coef: 0.0001

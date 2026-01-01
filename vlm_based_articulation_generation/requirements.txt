@@ -1,0 +1,25 @@
+# VLM environment ("VLM_PYTHON"): Python 3.11. Versions are the ones the released dataset was built with.
+# Install the CUDA build of torch first:
+#   pip install torch==2.11.0 torchvision==0.26.0 --index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0
+torchvision==0.26.0
+transformers==5.9.0
+peft==0.19.1
+accelerate==1.13.0
+safetensors==0.7.0
+qwen-vl-utils==0.0.14
+huggingface_hub>=1.0          # only for scripts/download_qwen3_vl.py (1.32.0 was used)
+numpy==2.4.4
+scipy==1.17.1
+scikit-image==0.26.0
+opencv-python-headless==5.0.0.93
+pillow==12.2.0
+trimesh==4.12.2
+requests==2.34.2
+tqdm==4.67.3
+
+# NOT installed via pip (see README "External requirements"):
+#   * Blender 5.0.1 EXACTLY (download the official tarball); its bundled python3.11 provides bpy + pxr
+#   * Isaac Sim 5.1 / Isaac Lab (OPTIONAL: only the FEM deformable cook)
+#   * ffmpeg + ffprobe on PATH (frame extraction)
+# Optional, only for scripts/canonical_iou*.py: rembg (U2-Net photo masks) in a separate venv.

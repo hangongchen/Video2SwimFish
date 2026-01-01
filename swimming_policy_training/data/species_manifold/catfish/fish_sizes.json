@@ -1,0 +1,236 @@
+{
+  "species": "catfish",
+  "calibration": {
+    "front_px_per_inch": 88.5,
+    "uncertainty_frac": 0.18,
+    "method": "front-view tank wall span (30in length), see module docstring"
+  },
+  "n_fish": 20,
+  "n_suspect_excluded": 0,
+  "median_length_in": 8.040412859728107,
+  "median_length_cm": 20.422648663709392,
+  "min_length_in": 4.976998366878531,
+  "max_length_in": 12.244085451977401,
+  "per_fish": {
+    "001": {
+      "fish_id": "001",
+      "bodylen_px_median": 1083.6015625,
+      "n_valid_frames": 460,
+      "length_in": 12.244085451977401,
+      "length_in_lo": 10.37634360337068,
+      "length_in_hi": 14.931811526801708,
+      "length_cm": 31.0999770480226,
+      "length_m": 0.310999770480226,
+      "suspect": false
+    },
+    "002": {
+      "fish_id": "002",
+      "bodylen_px_median": 581.19482421875,
+      "n_valid_frames": 860,
+      "length_in": 6.567173155014125,
+      "length_in_lo": 5.565400978825529,
+      "length_in_hi": 8.008747750017223,
+      "length_cm": 16.680619813735877,
+      "length_m": 0.16680619813735875,
+      "suspect": false
+    },
+    "003": {
+      "fish_id": "003",
+      "bodylen_px_median": 711.9754638671875,
+      "n_valid_frames": 763,
+      "length_in": 8.044920495674434,
+      "length_in_lo": 6.817729233622403,
+      "length_in_hi": 9.810878653261506,
+      "length_cm": 20.434098059013063,
+      "length_m": 0.20434098059013062,
+      "suspect": false
+    },
+    "004": {
+      "fish_id": "004",
+      "bodylen_px_median": 716.8797607421875,
+      "n_valid_frames": 836,
+      "length_in": 8.10033627957274,
+      "length_in_lo": 6.86469176234978,
+      "length_in_hi": 9.87845887752773,
+      "length_cm": 20.57485415011476,
+      "length_m": 0.2057485415011476,
+      "suspect": false
+    },
+    "005": {
+      "fish_id": "005",
+      "bodylen_px_median": 560.4396362304688,
+      "n_valid_frames": 237,
+      "length_in": 6.332651256841455,
+      "length_in_lo": 5.366653607492759,
+      "length_in_hi": 7.722745435172505,
+      "length_cm": 16.084934192377297,
+      "length_m": 0.16084934192377295,
+      "suspect": false
+    },
+    "006": {
+      "fish_id": "006",
+      "bodylen_px_median": 622.3190307617188,
+      "n_valid_frames": 942,
+      "length_in": 7.031853454934675,
+      "length_in_lo": 5.959197843164979,
+      "length_in_hi": 8.575431042603261,
+      "length_cm": 17.860907775534073,
+      "length_m": 0.17860907775534074,
+      "suspect": false
+    },
+    "007": {
+      "fish_id": "007",
+      "bodylen_px_median": 559.4852905273438,
+      "n_valid_frames": 905,
+      "length_in": 6.321867689574506,
+      "length_in_lo": 5.357514991164836,
+      "length_in_hi": 7.709594743383542,
+      "length_cm": 16.057543931519245,
+      "length_m": 0.16057543931519244,
+      "suspect": false
+    },
+    "008": {
+      "fish_id": "008",
+      "bodylen_px_median": 702.8909912109375,
+      "n_valid_frames": 784,
+      "length_in": 7.942271087129237,
+      "length_in_lo": 6.730738209431557,
+      "length_in_hi": 9.68569644771858,
+      "length_cm": 20.173368561308262,
+      "length_m": 0.2017336856130826,
+      "suspect": false
+    },
+    "009": {
+      "fish_id": "009",
+      "bodylen_px_median": 649.679931640625,
+      "n_valid_frames": 677,
+      "length_in": 7.341016176730226,
+      "length_in_lo": 6.221200149771378,
+      "length_in_hi": 8.952458752110031,
+      "length_cm": 18.646181088894775,
+      "length_m": 0.18646181088894773,
+      "suspect": false
+    },
+    "010": {
+      "fish_id": "010",
+      "bodylen_px_median": 694.0751342773438,
+      "n_valid_frames": 908,
+      "length_in": 7.8426568844897595,
+      "length_in_lo": 6.64631939363539,
+      "length_in_hi": 9.56421571279239,
+      "length_cm": 19.920348486603988,
+      "length_m": 0.1992034848660399,
+      "suspect": false
+    },
+    "011": {
+      "fish_id": "011",
+      "bodylen_px_median": 770.3089599609375,
+      "n_valid_frames": 674,
+      "length_in": 8.704056044756356,
+      "length_in_lo": 7.376318681996913,
+      "length_in_hi": 10.61470249360531,
+      "length_cm": 22.108302353681147,
+      "length_m": 0.22108302353681145,
+      "suspect": false
+    },
+    "012": {
+      "fish_id": "012",
+      "bodylen_px_median": 1031.4549560546875,
+      "n_valid_frames": 857,
+      "length_in": 11.654858260504943,
+      "length_in_lo": 9.876998525851647,
+      "length_in_hi": 14.213241781103589,
+      "length_cm": 29.603339981682556,
+      "length_m": 0.2960333998168255,
+      "suspect": false
+    },
+    "013": {
+      "fish_id": "013",
+      "bodylen_px_median": 872.44580078125,
+      "n_valid_frames": 266,
+      "length_in": 9.858144641596045,
+      "length_in_lo": 8.354359865759362,
+      "length_in_hi": 12.022127611702492,
+      "length_cm": 25.039687389653956,
+      "length_m": 0.25039687389653953,
+      "suspect": false
+    },
+    "014": {
+      "fish_id": "014",
+      "bodylen_px_median": 440.46435546875,
+      "n_valid_frames": 705,
+      "length_in": 4.976998366878531,
+      "length_in_lo": 4.2177952261682465,
+      "length_in_hi": 6.069510203510403,
+      "length_cm": 12.641575851871469,
+      "length_m": 0.1264157585187147,
+      "suspect": false
+    },
+    "015": {
+      "fish_id": "015",
+      "bodylen_px_median": 1014.6734619140625,
+      "n_valid_frames": 904,
+      "length_in": 11.465236857786017,
+      "length_in_lo": 9.716302421852557,
+      "length_in_hi": 13.981996168031726,
+      "length_cm": 29.121701618776484,
+      "length_m": 0.29121701618776485,
+      "suspect": false
+    },
+    "016": {
+      "fish_id": "016",
+      "bodylen_px_median": 711.1776123046875,
+      "n_valid_frames": 704,
+      "length_in": 8.03590522378178,
+      "length_in_lo": 6.810089172696424,
+      "length_in_hi": 9.799884419246071,
+      "length_cm": 20.41119926840572,
+      "length_m": 0.20411199268405722,
+      "suspect": false
+    },
+    "017": {
+      "fish_id": "017",
+      "bodylen_px_median": 762.2299194335938,
+      "n_valid_frames": 927,
+      "length_in": 8.612767451227048,
+      "length_in_lo": 7.298955467141567,
+      "length_in_hi": 10.50337494052079,
+      "length_cm": 21.876429326116703,
+      "length_m": 0.21876429326116703,
+      "suspect": false
+    },
+    "018": {
+      "fish_id": "018",
+      "bodylen_px_median": 639.9193115234375,
+      "n_valid_frames": 772,
+      "length_in": 7.23072668388065,
+      "length_in_lo": 6.127734477864958,
+      "length_in_hi": 8.817959370586157,
+      "length_cm": 18.36604577705685,
+      "length_m": 0.1836604577705685,
+      "suspect": false
+    },
+    "019": {
+      "fish_id": "019",
+      "bodylen_px_median": 752.035888671875,
+      "n_valid_frames": 744,
+      "length_in": 8.49758066295904,
+      "length_in_lo": 7.201339544880542,
+      "length_in_hi": 10.362903247511023,
+      "length_cm": 21.58385488391596,
+      "length_m": 0.2158385488391596,
+      "suspect": false
+    },
+    "020": {
+      "fish_id": "020",
+      "bodylen_px_median": 994.5004272460938,
+      "n_valid_frames": 813,
+      "length_in": 11.237292963232697,
+      "length_in_lo": 9.52312962985822,
+      "length_in_hi": 13.704015808820362,
+      "length_cm": 28.542724126611052,
+      "length_m": 0.2854272412661105,
+      "suspect": false
+    }
+  }
+}

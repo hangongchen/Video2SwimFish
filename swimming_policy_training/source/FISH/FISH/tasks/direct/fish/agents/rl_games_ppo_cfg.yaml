@@ -1,0 +1,137 @@
+params:
+  # RNG seed for reproducibility.
+  seed: 42
+
+  # Environment wrapper clipping before RL-Games sees data.
+  env:
+    # Max abs observation value passed to the policy.
+    clip_observations: 5.0
+    # Max abs action value sent through the wrapper.
+    clip_actions: 1.0
+
+  # RL algorithm selection (PPO uses a2c_continuous with ppo=True).
+  algo:
+    name: a2c_continuous
+
+  # Model class used by RL-Games.
+  model:
+    # Log-std variant to expose values for PPO.
+    name: continuous_a2c_logstd
+
+  # Network architecture and init.
+  network:
+    name: actor_critic
+    # Shared actor/critic trunk.
+    separate: False
+    # Continuous action space settings.
+    space:
+      continuous:
+        # Activation for action mean (mu).
+        mu_activation: None
+        # Activation for action std (sigma).
+        sigma_activation: None
+
+        # Mean initializer.
+        mu_init:
+          name: default
+        # Std initializer. LOGSTD value (actual exploration std = exp(val)).
+        # REMEDY (2), 2026-07-22: -0.5 (std 0.61) -> -1.6 (std 0.20). The large 0.61 std let EXPLORATION
+        # NOISE carry the motion while the deterministic MEAN froze (the mean-freeze the displacement
+        # reward alone did not cure). A small std forces sampled ~= mean, so the mean must produce the
+        # gait to earn r_displacement. (Watch blow-ups: less noise -> more coherent FEM excitation; the
+        # fem_velocity_limit guard + truncation handle it, and ck=1 runs have been blow-up-free.)
+        sigma_init:
+          name: const_initializer
+          val: -0.5      # RESTORED for kinematic imitation: the anti-noise tracking reward handles the
+                         # freeze (noise degrades tracking -> mean must undulate), so we need EXPLORATION
+                         # (std 0.61) to discover the fast gait. remedy-2's -1.6 starved it (r_track stuck).
+        # state-independent learnable sigma (clean/controlled), so the lowered std actually holds.
+        fixed_sigma: True
+    mlp:
+      # Hidden layer sizes.
+      units: [128, 128, 64]
+      # Activation function.
+      activation: elu
+      # Use D2RL connections.
+      d2rl: False
+
+      # Weight initializer.
+      initializer:
+        name: default
+      # Weight regularizer.
+      regularizer:
+        name: None
+
+  # Resume training from checkpoint.
+  load_checkpoint: False
+  # Path to checkpoint when load_checkpoint is True.
+  load_path: ''
+
+  config:
+    # Run name and log directory tag.
+    name: cartpole_direct
+    # RL-Games env wrapper name.
+    env_name: rlgpu
+    # Training device.
+    device: 'cuda:0'
+    # Device name used by RL-Games.
+    device_name: 'cuda:0'
+    # Enable multi-GPU training.
+    multi_gpu: False
+    # Enable PPO mode.
+    ppo: True
+    # Use AMP mixed precision.
+    mixed_precision: False
+    # Normalize observations with running stats.
+    normalize_input: True
+    # Normalize value targets.
+    normalize_value: True
+    # Number of parallel envs (overridden by train script).
+    num_actors: -1
+    # Reward scaling.
+    reward_shaper:
+      scale_value: 0.1
+    # Normalize advantages.
+    normalize_advantage: True
+    # Discount factor.
+    gamma: 0.99
+    # GAE lambda.
+    tau: 0.95
+    # Optimizer learning rate.
+    learning_rate: 3e-4
+    # LR schedule type (adaptive uses KL).
+    lr_schedule: adaptive
+    # KL target for adaptive LR.
+    kl_threshold: 0.008
+    # Early stop threshold for scores (unused here).
+    score_to_win: 20000
+    # Max training epochs.
+    max_epochs: 10000
+    # Save best model after this epoch.
+    save_best_after: 10
+    # Save checkpoint every N epochs.
+    save_frequency: 10
+    # Gradient norm clip.
+    grad_norm: 1.0
+    # Entropy bonus coefficient.
+    entropy_coef: 0.002      # restored for kinematic imitation exploration
+    # Clip gradients.
+    truncate_grads: True
+    # PPO clip epsilon.
+    e_clip: 0.2
+    # Rollout length per update.
+    horizon_length: 256
+    # Minibatch PER ENV -> minibatch_size = this * num_envs, so num_minibatches = 256/this = 8
+    # regardless of num_envs (was a FIXED minibatch_size: 64 -> 1024+ tiny minibatches at 256
+    # envs -> the multi-second stall at every step==256 / PPO update). Keep this, NOT minibatch_size.
+    minibatch_size_per_env: 32
+    # PPO epochs per update.
+    mini_epochs: 8
+    # Critic loss weight.
+    critic_coef: 4
+    # Clip value function updates.
+    clip_value: True
+    # Sequence length for RNNs (unused for MLP).
+    seq_length: 4
+    # Action bounds loss weight.
+    bounds_loss_coef: 0.0001

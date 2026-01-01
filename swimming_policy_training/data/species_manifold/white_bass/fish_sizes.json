@@ -1,0 +1,242 @@
+{
+  "species": "white_bass",
+  "calibration": {
+    "front_px_per_inch": 89.36666666666666,
+    "uncertainty_frac": 0.18,
+    "method": "front-view tank wall span (30in length), see module docstring"
+  },
+  "n_fish": 20,
+  "n_suspect_excluded": 3,
+  "median_length_in": 2.4770553571792826,
+  "median_length_cm": 6.291720607235378,
+  "min_length_in": 0.9899211116621451,
+  "max_length_in": 12.022117720038,
+  "per_fish": {
+    "001": {
+      "fish_id": "001",
+      "bodylen_px_median": 219.5849609375,
+      "n_valid_frames": 827,
+      "length_in": 2.4571237702816116,
+      "length_in_lo": 2.082308279899671,
+      "length_in_hi": 2.996492402782453,
+      "length_cm": 6.241094376515293,
+      "length_m": 0.06241094376515293,
+      "suspect": false
+    },
+    "002": {
+      "fish_id": "002",
+      "bodylen_px_median": 259.25494384765625,
+      "n_valid_frames": 808,
+      "length_in": 2.901025108328865,
+      "length_in_lo": 2.4584958545159874,
+      "length_in_hi": 3.537835497962031,
+      "length_cm": 7.368603775155318,
+      "length_m": 0.07368603775155318,
+      "suspect": false
+    },
+    "003": {
+      "fish_id": "003",
+      "bodylen_px_median": 453.98272705078125,
+      "n_valid_frames": 411,
+      "length_in": 5.080000675689458,
+      "length_in_lo": 4.305085318380897,
+      "length_in_hi": 6.195122775231047,
+      "length_cm": 12.903201716251225,
+      "length_m": 0.12903201716251222,
+      "suspect": false
+    },
+    "004": {
+      "fish_id": "004",
+      "bodylen_px_median": 193.20700073242188,
+      "n_valid_frames": 735,
+      "length_in": 2.161958232738775,
+      "length_in_lo": 1.8321679938464197,
+      "length_in_hi": 2.636534430169238,
+      "length_cm": 5.491373911156489,
+      "length_m": 0.054913739111564885,
+      "suspect": false
+    },
+    "005": {
+      "fish_id": "005",
+      "bodylen_px_median": 196.79205322265625,
+      "n_valid_frames": 668,
+      "length_in": 2.202074448593692,
+      "length_in_lo": 1.8661647869438067,
+      "length_in_hi": 2.6854566446264534,
+      "length_cm": 5.593269099427978,
+      "length_m": 0.05593269099427978,
+      "suspect": false
+    },
+    "006": {
+      "fish_id": "006",
+      "bodylen_px_median": 1074.3765869140625,
+      "n_valid_frames": 282,
+      "length_in": 2.4770553571792826,
+      "length_in_lo": 2.0991994552366804,
+      "length_in_hi": 3.020799216072296,
+      "length_cm": 6.291720607235378,
+      "length_m": 0.06291720607235378,
+      "suspect": true,
+      "measured_length_in_raw": 12.022117720038,
+      "size_source": "species_median_fallback"
+    },
+    "007": {
+      "fish_id": "007",
+      "bodylen_px_median": 258.44287109375,
+      "n_valid_frames": 767,
+      "length_in": 2.891938132343342,
+      "length_in_lo": 2.450795027409612,
+      "length_in_hi": 3.526753819930905,
+      "length_cm": 7.3455228561520896,
+      "length_m": 0.07345522856152088,
+      "suspect": false
+    },
+    "008": {
+      "fish_id": "008",
+      "bodylen_px_median": 235.48899841308594,
+      "n_valid_frames": 981,
+      "length_in": 2.6350876361031625,
+      "length_in_lo": 2.233125115341663,
+      "length_in_hi": 3.213521507442881,
+      "length_cm": 6.693122595702033,
+      "length_m": 0.06693122595702032,
+      "suspect": false
+    },
+    "009": {
+      "fish_id": "009",
+      "bodylen_px_median": 219.2250518798828,
+      "n_valid_frames": 637,
+      "length_in": 2.4530964402821653,
+      "length_in_lo": 2.0788952883747163,
+      "length_in_hi": 2.991581024734348,
+      "length_cm": 6.2308649583167,
+      "length_m": 0.062308649583166995,
+      "suspect": false
+    },
+    "010": {
+      "fish_id": "010",
+      "bodylen_px_median": 88.46595001220703,
+      "n_valid_frames": 244,
+      "length_in": 2.4770553571792826,
+      "length_in_lo": 2.0991994552366804,
+      "length_in_hi": 3.020799216072296,
+      "length_cm": 6.291720607235378,
+      "length_m": 0.06291720607235378,
+      "suspect": true,
+      "measured_length_in_raw": 0.9899211116621451,
+      "size_source": "species_median_fallback"
+    },
+    "011": {
+      "fish_id": "011",
+      "bodylen_px_median": 124.02680206298828,
+      "n_valid_frames": 253,
+      "length_in": 3.2404603270745,
+      "length_in_lo": 2.5923682616596,
+      "length_in_hi": 4.050575408843125,
+      "length_cm": 8.23076923076923,
+      "length_m": 0.0823076923076923,
+      "suspect": true,
+      "size_source": "canonical_crop_estimate (10.7 cm / perspective 1.3); video tracking followed another fish"
+    },
+    "012": {
+      "fish_id": "012",
+      "bodylen_px_median": 154.3123321533203,
+      "n_valid_frames": 637,
+      "length_in": 1.7267325492725139,
+      "length_in_lo": 1.4633326688750117,
+      "length_in_hi": 2.1057714015518463,
+      "length_cm": 4.385900675152185,
+      "length_m": 0.04385900675152185,
+      "suspect": false
+    },
+    "013": {
+      "fish_id": "013",
+      "bodylen_px_median": 311.38067626953125,
+      "n_valid_frames": 756,
+      "length_in": 3.4843044714979254,
+      "length_in_lo": 2.952800399574513,
+      "length_in_hi": 4.2491517945096655,
+      "length_cm": 8.850133357604731,
+      "length_m": 0.08850133357604731,
+      "suspect": false
+    },
+    "014": {
+      "fish_id": "014",
+      "bodylen_px_median": 353.36895751953125,
+      "n_valid_frames": 996,
+      "length_in": 3.9541472307295553,
+      "length_in_lo": 3.3509722294318265,
+      "length_in_hi": 4.822130769182385,
+      "length_cm": 10.04353396605307,
+      "length_m": 0.1004353396605307,
+      "suspect": false
+    },
+    "015": {
+      "fish_id": "015",
+      "bodylen_px_median": 193.9508056640625,
+      "n_valid_frames": 614,
+      "length_in": 2.170281301723937,
+      "length_in_lo": 1.8392214421389297,
+      "length_in_hi": 2.646684514297484,
+      "length_cm": 5.512514506378801,
+      "length_m": 0.055125145063787996,
+      "suspect": false
+    },
+    "016": {
+      "fish_id": "016",
+      "bodylen_px_median": 150.0398406982422,
+      "n_valid_frames": 375,
+      "length_in": 1.678923991401442,
+      "length_in_lo": 1.422816941865629,
+      "length_in_hi": 2.0474682821968804,
+      "length_cm": 4.2644669381596625,
+      "length_m": 0.042644669381596625,
+      "suspect": false
+    },
+    "017": {
+      "fish_id": "017",
+      "bodylen_px_median": 345.8504333496094,
+      "n_valid_frames": 836,
+      "length_in": 3.8700160389736227,
+      "length_in_lo": 3.27967460929968,
+      "length_in_hi": 4.719531754845881,
+      "length_cm": 9.829840738993001,
+      "length_m": 0.09829840738993001,
+      "suspect": false
+    },
+    "018": {
+      "fish_id": "018",
+      "bodylen_px_median": 163.19554138183594,
+      "n_valid_frames": 378,
+      "length_in": 1.826134368315956,
+      "length_in_lo": 1.5475714985728442,
+      "length_in_hi": 2.2269931320926295,
+      "length_cm": 4.638381295522529,
+      "length_m": 0.046383812955225284,
+      "suspect": false
+    },
+    "019": {
+      "fish_id": "019",
+      "bodylen_px_median": 225.935546875,
+      "n_valid_frames": 486,
+      "length_in": 2.5281859031145095,
+      "length_in_lo": 2.1425304263682285,
+      "length_in_hi": 3.0831535403835484,
+      "length_cm": 6.421592193910854,
+      "length_m": 0.06421592193910854,
+      "suspect": false
+    },
+    "020": {
+      "fish_id": "020",
+      "bodylen_px_median": 223.14739990234375,
+      "n_valid_frames": 764,
+      "length_in": 2.4969869440769537,
+      "length_in_lo": 2.1160906305736895,
+      "length_in_hi": 3.0451060293621386,
+      "length_cm": 6.342346837955462,
+      "length_m": 0.06342346837955462,
+      "suspect": false
+    }
+  },
+  "notes_2026_09_20": "front-view ROI 40,300,2700,1800; unreliable fish -> species median; 5 fish whose video tracking followed a different (smaller) fish -> canonical-crop estimate / 1.3 perspective; bluegill 001 is a real 1.5 cm fry"
+}
