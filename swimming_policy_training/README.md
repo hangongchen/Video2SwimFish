@@ -245,7 +245,7 @@ Post-hoc scripts: `scripts/eval/*` (trajectory fidelity, biofidelity suite, vide
 
 * `python -m py_compile` on every file, `bash -n` on every shell script.
 * Smoke test of the *relocated* code (from a clean clone layout, shadowing the machine's other `FISH` install):
-  `train_ppo.py --task Bench-catfish_fish002-TrajFollow-PCA-v0 --num_envs 4 --max_iterations 2` — see the result recorded at the end of this file (§10).
+  `train_ppo.py --task Bench-catfish_fish002-TrajFollow-PCA-v0 --num_envs 4 --max_iterations 2` — results in §10: **all 8 entry points passed**.
 
 ---------------------------------------------------------------------------------------------------
 
@@ -306,8 +306,11 @@ install; the harness shadowed it with the code of this repository (the log line 
 |---|---|
 | `train_ppo.py --task Bench-catfish_fish002-TrajFollow-PCA-v0 --max_iterations 2` | **passed** — FEM material created + bound, `disabled 29 colliders`, DriveAPI authored on 14 D6 joints, BLM loaded (`a_max`, `Δa_max`), epoch-1 `[EVAL]` line (completion 0.25, Fréchet 1.07 BL, W1(κ) 0.51, f 0.37 Hz, 0.30 BL/s), checkpoint written |
 | `… Bench-catfish_fish002-TrajFollow-Joint-v0 --max_iterations 1` | **passed** (exit 0, checkpoint written; `reward=nan` because no episode finished in 1 epoch with 4 envs) |
-| `… Bench-catfish_fish002-TrajFollow-CPG-v0 --max_iterations 1` | epoch-1 `[EVAL]` line produced (completion 0.25); see the update below for the exit status |
-| `… TrajFollow-Joint-AMP`, `… ROVCatch`, `run_freeswim_bc.py --baseline blm_il`, `--baseline bco_pure` | queued in the same harness — results are added to this table as they finish (see git history of this file) |
+| `… Bench-catfish_fish002-TrajFollow-CPG-v0 --max_iterations 1` | **passed** (exit 0; epoch-1 `[EVAL]`: completion 0.25, Fréchet 1.08 BL, f 1.48 Hz) |
+| `… Bench-catfish_fish002-TrajFollow-Joint-AMP-v0 --max_iterations 1` | **passed** (exit 0; AMP discriminator + reference loaded) |
+| `… Bench-catfish_fish002-ROVCatch-v0 --max_iterations 1` | **passed** (exit 0). The ROV USD loads without the URDF `meshes/` folder (not shipped, 80 MB) |
+| `scripts/benchmark/run_freeswim_bc.py --baseline blm_il --n_modes 4 --smooth_win 5 --bc_epochs 3` | **passed** — BC trained, 20-state eval printed `FREESWIM-EVAL` (Fréchet, speed, heading stability, W1(κ), frequency) |
+| `scripts/benchmark/run_freeswim_bc.py --baseline bco_pure --idm_transitions 3000 --bc_epochs 3` | **passed** — random rollouts → IDM → pseudo-labels → BC → eval in a fresh process (`FREESWIM_DONE`) |
 
-These are *plumbing* tests (the code path from task registration to a written checkpoint and metrics). They say nothing about final performance; the full
+All eight baseline entry points therefore run end to end from this repository. These are *plumbing* tests (the code path from task registration to a written checkpoint and metrics). They say nothing about final performance; the full
 benchmark (256 envs, hundreds of epochs per run) was not repeated for this release.
