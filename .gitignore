@@ -1,0 +1,34 @@
+# python / editors
+__pycache__/
+*.pyc
+*.egg-info/
+.vscode/
+*.blend1
+*.bak
+.DS_Store
+
+# secrets (never commit)
+.meshy_api_key
+.wandb_key*
+*.key
+
+# ---- swimming_policy_training: generated / heavy ----
+swimming_policy_training/logs/
+swimming_policy_training/run_logs/
+swimming_policy_training/wandb/
+swimming_policy_training/outputs/
+swimming_policy_training/queue.json
+swimming_policy_training/checkpoints/*
+!swimming_policy_training/checkpoints/benchmark/
+swimming_policy_training/checkpoints/benchmark/*
+!swimming_policy_training/checkpoints/benchmark/blm_il/
+swimming_policy_training/checkpoints/benchmark/blm_il/*/dataset.npz
+
+# ---- vlm_based_articulation_generation: heavy / generated (see its README for how to obtain) ----
+vlm_based_articulation_generation/models/
+vlm_based_articulation_generation/checkpoints/
+vlm_based_articulation_generation/raw_datasets/
+vlm_based_articulation_generation/dataset/
+vlm_based_articulation_generation/dataset_run*/
+vlm_based_articulation_generation/outputs*/
+vlm_based_articulation_generation/sft_data/

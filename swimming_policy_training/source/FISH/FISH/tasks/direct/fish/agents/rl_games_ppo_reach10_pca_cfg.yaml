@@ -1,0 +1,78 @@
+params:
+  # PPO config for the 2-PC PCA-manifold swim experiment (Template-Salmon-Swim-PCA-Misty-Direct-v0).
+  # SEPARATE file from rl_games_ppo_cfg.yaml so the AMP experiments stay untouched.
+  seed: 42
+
+  env:
+    clip_observations: 5.0
+    clip_actions: 1.0
+
+  algo:
+    name: a2c_continuous
+
+  model:
+    name: continuous_a2c_logstd
+
+  network:
+    name: actor_critic
+    separate: False
+    space:
+      continuous:
+        mu_activation: None
+        sigma_activation: None
+        mu_init:
+          name: default
+        # std = exp(-0.5) = 0.61 on the [-1,1] delta-a actions: strong exploration is what
+        # discovers the oscillation; the bounded-rate integrator keeps poses smooth anyway,
+        # so noise cannot teleport the body -- it only wiggles the coefficient trajectory.
+        sigma_init:
+          name: const_initializer
+          val: -0.5
+        fixed_sigma: True
+    mlp:
+      # small net for a 30-dim obs / 2-dim action problem
+      units: [128, 64]
+      activation: elu
+      d2rl: False
+      initializer:
+        name: default
+      regularizer:
+        name: None
+
+  load_checkpoint: False
+  load_path: ''
+
+  config:
+    name: fish_random10_allPCA
+    env_name: rlgpu
+    device: 'cuda:0'
+    device_name: 'cuda:0'
+    multi_gpu: False
+    ppo: True
+    mixed_precision: False
+    normalize_input: True
+    normalize_value: True
+    num_actors: -1
+    reward_shaper:
+      scale_value: 1.0        # rewards are already O(0.1)/step; no extra shrink
+    normalize_advantage: True
+    gamma: 0.99
+    tau: 0.95
+    learning_rate: 3e-4
+    lr_schedule: adaptive
+    kl_threshold: 0.008
+    score_to_win: 1000000
+    max_epochs: 2000
+    save_best_after: 10
+    save_frequency: 25
+    grad_norm: 1.0
+    entropy_coef: 0.003       # a bit higher than the AMP runs: 2-dim action space, cheap to explore
+    truncate_grads: True
+    e_clip: 0.2
+    horizon_length: 256
+    minibatch_size_per_env: 32
+    mini_epochs: 5
+    critic_coef: 4
+    clip_value: True
+    seq_length: 4
+    bounds_loss_coef: 0.0001

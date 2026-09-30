@@ -1,0 +1,314 @@
+{
+  "description": "Manually-constructed fish skeleton dataset (paper Sec. 3.5: fourteen controllable fish models used as fish-specific fine-tuning examples for the actor). blend / skeleton_json paths are relative to this directory.",
+  "n_fish": 14,
+  "fish": [
+    {
+      "key": "carp",
+      "blend": "carp/carp.blend",
+      "skeleton_json": "carp/skeleton.json",
+      "bone_count": 7,
+      "features": {
+        "size": [
+          8.725160598754883,
+          3.742220401763916,
+          1.3629932403564453
+        ],
+        "length_axis": 0,
+        "height_axis": 1,
+        "thickness_axis": 2,
+        "length": 8.725160598754883,
+        "height": 3.742220401763916,
+        "thickness": 1.3629932403564453,
+        "length_height_ratio": 2.331546424855744,
+        "length_thickness_ratio": 6.401470191057667
+      },
+      "fish_mesh_name": "carp_fish"
+    },
+    {
+      "key": "pumpkinseed",
+      "blend": "pumpkinseed/pumpkinseed.blend",
+      "skeleton_json": "pumpkinseed/skeleton.json",
+      "bone_count": 4,
+      "features": {
+        "size": [
+          13.987573623657227,
+          7.569257736206055,
+          1.8339784145355225
+        ],
+        "length_axis": 0,
+        "height_axis": 1,
+        "thickness_axis": 2,
+        "length": 13.987573623657227,
+        "height": 7.569257736206055,
+        "thickness": 1.8339784145355225,
+        "length_height_ratio": 1.8479452161802368,
+        "length_thickness_ratio": 7.626901992300575
+      },
+      "fish_mesh_name": "pumpkinseed_fish_obj"
+    },
+    {
+      "key": "redsnapper",
+      "blend": "redsnapper/redsnapper.blend",
+      "skeleton_json": "redsnapper/skeleton.json",
+      "bone_count": 6,
+      "features": {
+        "size": [
+          13.91797924041748,
+          5.230771541595459,
+          1.6125233173370361
+        ],
+        "length_axis": 0,
+        "height_axis": 1,
+        "thickness_axis": 2,
+        "length": 13.91797924041748,
+        "height": 5.230771541595459,
+        "thickness": 1.6125233173370361,
+        "length_height_ratio": 2.66078897343169,
+        "length_thickness_ratio": 8.631180145290552
+      },
+      "fish_mesh_name": "red_snapper_fish_obj"
+    },
+    {
+      "key": "roach",
+      "blend": "roach/roach.blend",
+      "skeleton_json": "roach/skeleton.json",
+      "bone_count": 5,
+      "features": {
+        "size": [
+          12.256450653076172,
+          6.444677352905273,
+          1.1317367553710938
+        ],
+        "length_axis": 0,
+        "height_axis": 1,
+        "thickness_axis": 2,
+        "length": 12.256450653076172,
+        "height": 6.444677352905273,
+        "thickness": 1.1317367553710938,
+        "length_height_ratio": 1.9017942996868478,
+        "length_thickness_ratio": 10.829771671644005
+      },
+      "fish_mesh_name": "roach_fish_obj"
+    },
+    {
+      "key": "ruby",
+      "blend": "ruby/ruby.blend",
+      "skeleton_json": "ruby/skeleton.json",
+      "bone_count": 6,
+      "features": {
+        "size": [
+          12.024763107299805,
+          5.635295391082764,
+          1.6619505882263184
+        ],
+        "length_axis": 0,
+        "height_axis": 1,
+        "thickness_axis": 2,
+        "length": 12.024763107299805,
+        "height": 5.635295391082764,
+        "thickness": 1.6619505882263184,
+        "length_height_ratio": 2.1338301318379287,
+        "length_thickness_ratio": 7.235331298346829
+      },
+      "fish_mesh_name": "ruby_fish_obj"
+    },
+    {
+      "key": "rudd",
+      "blend": "rudd/rudd.blend",
+      "skeleton_json": "rudd/skeleton.json",
+      "bone_count": 5,
+      "features": {
+        "size": [
+          9.036762237548828,
+          3.3935956954956055,
+          1.1193842887878418
+        ],
+        "length_axis": 0,
+        "height_axis": 1,
+        "thickness_axis": 2,
+        "length": 9.036762237548828,
+        "height": 3.3935956954956055,
+        "thickness": 1.1193842887878418,
+        "length_height_ratio": 2.662887111020185,
+        "length_thickness_ratio": 8.072975767182289
+      },
+      "fish_mesh_name": "rudd_fish_obj"
+    },
+    {
+      "key": "salmon",
+      "blend": "salmon/salmon.blend",
+      "skeleton_json": "salmon/skeleton.json",
+      "bone_count": 7,
+      "features": {
+        "size": [
+          10.612520217895508,
+          2.775250196456909,
+          1.2674226760864258
+        ],
+        "length_axis": 0,
+        "height_axis": 1,
+        "thickness_axis": 2,
+        "length": 10.612520217895508,
+        "height": 2.775250196456909,
+        "thickness": 1.2674226760864258,
+        "length_height_ratio": 3.823986836013647,
+        "length_thickness_ratio": 8.373307830237872
+      },
+      "fish_mesh_name": "salmon_fish"
+    },
+    {
+      "key": "seabass",
+      "blend": "seabass/seabass.blend",
+      "skeleton_json": "seabass/skeleton.json",
+      "bone_count": 7,
+      "features": {
+        "size": [
+          9.901866912841797,
+          3.4312844276428223,
+          1.0575382709503174
+        ],
+        "length_axis": 0,
+        "height_axis": 1,
+        "thickness_axis": 2,
+        "length": 9.901866912841797,
+        "height": 3.4312844276428223,
+        "thickness": 1.0575382709503174,
+        "length_height_ratio": 2.8857610383654637,
+        "length_thickness_ratio": 9.36312867802302
+      },
+      "fish_mesh_name": "seabass_fish_obj"
+    },
+    {
+      "key": "spottedseatrout",
+      "blend": "spottedseatrout/spottedseatrout.blend",
+      "skeleton_json": "spottedseatrout/skeleton.json",
+      "bone_count": 6,
+      "features": {
+        "size": [
+          9.497922897338867,
+          3.6945767402648926,
+          1.2776117324829102
+        ],
+        "length_axis": 0,
+        "height_axis": 1,
+        "thickness_axis": 2,
+        "length": 9.497922897338867,
+        "height": 3.6945767402648926,
+        "thickness": 1.2776117324829102,
+        "length_height_ratio": 2.5707742902798354,
+        "length_thickness_ratio": 7.434123103175178
+      },
+      "fish_mesh_name": "spotted_seatrout_fish_obj"
+    },
+    {
+      "key": "tench",
+      "blend": "tench/tench.blend",
+      "skeleton_json": "tench/skeleton.json",
+      "bone_count": 6,
+      "features": {
+        "size": [
+          9.066781997680664,
+          4.555640697479248,
+          1.297412395477295
+        ],
+        "length_axis": 0,
+        "height_axis": 1,
+        "thickness_axis": 2,
+        "length": 9.066781997680664,
+        "height": 4.555640697479248,
+        "thickness": 1.297412395477295,
+        "length_height_ratio": 1.9902320221824221,
+        "length_thickness_ratio": 6.988357772198682
+      },
+      "fish_mesh_name": "tench_fish_obj"
+    },
+    {
+      "key": "tigerbarb",
+      "blend": "tigerbarb/tigerbarb.blend",
+      "skeleton_json": "tigerbarb/skeleton.json",
+      "bone_count": 7,
+      "features": {
+        "size": [
+          8.849193572998047,
+          4.910459518432617,
+          1.3055284023284912
+        ],
+        "length_axis": 0,
+        "height_axis": 1,
+        "thickness_axis": 2,
+        "length": 8.849193572998047,
+        "height": 4.910459518432617,
+        "thickness": 1.3055284023284912,
+        "length_height_ratio": 1.802111093631955,
+        "length_thickness_ratio": 6.778246690929864
+      },
+      "fish_mesh_name": "tiger_barb_fish_obj"
+    },
+    {
+      "key": "tilapia",
+      "blend": "tilapia/tilapia.blend",
+      "skeleton_json": "tilapia/skeleton.json",
+      "bone_count": 5,
+      "features": {
+        "size": [
+          12.48697280883789,
+          6.871586799621582,
+          1.272582769393921
+        ],
+        "length_axis": 0,
+        "height_axis": 1,
+        "thickness_axis": 2,
+        "length": 12.48697280883789,
+        "height": 6.871586799621582,
+        "thickness": 1.272582769393921,
+        "length_height_ratio": 1.8171891257381116,
+        "length_thickness_ratio": 9.812306994212191
+      },
+      "fish_mesh_name": "tilapia_fish_obj"
+    },
+    {
+      "key": "trevally",
+      "blend": "trevally/trevally.blend",
+      "skeleton_json": "trevally/skeleton.json",
+      "bone_count": 6,
+      "features": {
+        "size": [
+          9.573616027832031,
+          4.259372711181641,
+          1.017362356185913
+        ],
+        "length_axis": 0,
+        "height_axis": 1,
+        "thickness_axis": 2,
+        "length": 9.573616027832031,
+        "height": 4.259372711181641,
+        "thickness": 1.017362356185913,
+        "length_height_ratio": 2.2476586758185118,
+        "length_thickness_ratio": 9.41023222416394
+      },
+      "fish_mesh_name": "trevally fish"
+    },
+    {
+      "key": "zander",
+      "blend": "zander/zander.blend",
+      "skeleton_json": "zander/skeleton.json",
+      "bone_count": 8,
+      "features": {
+        "size": [
+          16.17334747314453,
+          5.651862144470215,
+          1.4341931343078613
+        ],
+        "length_axis": 0,
+        "height_axis": 1,
+        "thickness_axis": 2,
+        "length": 16.17334747314453,
+        "height": 5.651862144470215,
+        "thickness": 1.4341931343078613,
+        "length_height_ratio": 2.861596242040076,
+        "length_thickness_ratio": 11.276966181371211
+      },
+      "fish_mesh_name": "zander_fish_obj"
+    }
+  ]
+}

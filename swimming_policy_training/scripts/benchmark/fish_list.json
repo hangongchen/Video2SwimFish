@@ -1,0 +1,24 @@
+{
+ "_comment": "Benchmark fish. traj = trajectory following (2/species), freeswim = subset (1/species). white_bass filled in when its articulation finishes. | white_bass_fish008_nohead (2026-09-24): fish008 with the 2 head-most bones (bone_12/13) + their D6 joints removed, head FEM skin re-attached to bone_14; 13 bones / 12 joints.",
+ "traj": [
+  "catfish_fish002",
+  "catfish_fish001",
+  "lake_sturgeon_fish001",
+  "bluegill_fish015",
+  "bluegill_fish020",
+  "white_bass_fish008",
+  "lake_sturgeon_fish016",
+  "white_bass_fish020",
+  "white_bass_fish008_nohead"
+ ],
+ "freeswim": [
+  "catfish_fish002",
+  "lake_sturgeon_fish016",
+  "bluegill_fish015",
+  "white_bass_fish008"
+ ],
+ "pending_species": "none (white_bass 008+020 selected 2026-09-21 04:57)",
+ "replaced": {
+  "lake_sturgeon_fish020": "lake_sturgeon_fish016 (2026-09-21 05:05): fish020 asset FEM-unstable at kp 120/30/10/3 (calib blowups 210/202/208/206, train blowup_rate 0.84); fish016 calib blowups 8. fish011 considered (76 blowups, cond 6.8e6) and rejected."
+ }
+}

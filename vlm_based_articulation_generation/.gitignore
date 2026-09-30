@@ -1,0 +1,21 @@
+# big / external artifacts (obtain separately, see README)
+/models/
+/checkpoints/
+/dataset/
+/dataset_spine/
+/dataset_run*/
+/raw_datasets/
+/species_manifold/
+/eval_out/
+/outputs*/
+# python / blender junk
+__pycache__/
+*.pyc
+*.blend1
+*.blend2
+# secrets
+.meshy_api_key
+*api_key*
+*.key
+.env
+wandb/

@@ -1,0 +1,21 @@
+# Python packages used by the training / evaluation code (versions = the environment the results were produced in).
+# NOT listed here (install separately, see README section 3):
+#   isaacsim==5.1.0 (pip, --extra-index-url https://pypi.nvidia.com), Isaac Lab (isaaclab, isaaclab_rl, isaaclab_tasks, ...), torch==2.7.0+cu128
+# Python must be 3.11 (train_ppo.py imports distutils).
+rl-games==1.6.1
+wandb==0.25.0
+gymnasium==1.2.1
+hydra-core==1.3.2
+numpy==1.26.0
+scipy==1.15.3
+scikit-image==0.26.0
+opencv-python-headless==4.11.0.86
+trimesh==4.5.1
+matplotlib==3.10.3
+imageio==2.37.0
+imageio-ffmpeg==0.6.0
+tensorboardX==2.6.4
+PyYAML==6.0.2
+h5py
+pandas
+tqdm

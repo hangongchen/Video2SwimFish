@@ -1,0 +1,68 @@
+{
+  "schema_version": "0.1.0",
+  "source": {
+    "note": "Authored from the internal 'Guideline of create a mesh with skeleton' and the real_size_tuna reference USD (not shipped). NOTE: fish.mass/density are overridden by add_isaac_physics_to_usd.mass_distribution_from_mesh; joint.drive is NOT read by any code (no DriveAPI is authored); see README 'Joint preset: USD vs training'."
+  },
+  "fish": {
+    "mass": 0.1,
+    "deformable_mass": 0.00001,
+    "density": 0.0,
+    "target_length_m": 0.5,
+    "water_density_kg_per_m3": 1000.0,
+    "volume_fill_fraction": 0.35,
+    "mesh_volume_min_bbox_fraction": 0.15,
+    "mesh_volume_max_bbox_fraction": 0.8,
+    "deformable_material": {
+      "dynamic_friction": 0.25,
+      "poissons_ratio": 0.45,
+      "youngs_modulus": 100000.0,
+      "elasticity_damping": 0.05,
+      "damping_scale": 1.0
+    }
+  },
+  "bone": {
+    "total_mass": 25.0,
+    "rigid_body_enabled": true,
+    "kinematic_enabled": false,
+    "starts_asleep": false,
+    "collision_enabled": true,
+    "collision_approximation": "convexHull"
+  },
+  "joint": {
+    "type": "D6",
+    "collision_enabled": false,
+    "exclude_from_articulation": false,
+    "break_force": "inf",
+    "break_torque": "inf",
+    "translation_limits": {
+      "low": 1.0,
+      "high": -1.0
+    },
+    "rotation_limits": {
+      "low": -15.0,
+      "high": 15.0
+    },
+    "drive": {
+      "type": "force",
+      "max_force": "inf",
+      "target_position": 0.0,
+      "target_velocity": 20.0,
+      "damping": 1000.0,
+      "stiffness": 0.0
+    }
+  },
+  "ground_plane": {
+    "enabled": true,
+    "active": false,
+    "size": 200.0,
+    "world_z": 0.0
+  },
+  "stage": {
+    "global_scale": 1.0,
+    "target_fish_bottom_z": 1.0
+  },
+  "attachments": {
+    "attach_rigid_surface": true,
+    "note": "Isaac Sim PhysxPhysicsAttachment prims are created as placeholders with attachment metadata. Exact deformable tetra data still requires Isaac Sim cooking."
+  }
+}
