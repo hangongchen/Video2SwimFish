@@ -48,7 +48,7 @@ Given synchronized top / front videos of one fish, the pipeline builds a metrica
 |---|---|---|
 | Raw synchronized videos (120 fish, 6 species) and the released 120 assets | 39 GB+ | Hugging Face dataset above |
 | Qwen3-VL-32B-Instruct weights | 63 GB | `python vlm_based_articulation_generation/scripts/download_qwen3_vl.py` (Hugging Face `Qwen/Qwen3-VL-32B-Instruct`) |
-| Actor LoRA adapter used for the released assets (`actor_lora_v2`) | 547 MB | not in git — retrain in ~1 h from the 14 hand-built fish in `data/` (exact command in the VLM README) or ask the authors |
+| Actor LoRA adapter used for the released assets (`actor_lora_v2`) | 547 MB | not in git — Hugging Face model repo `video2swimfish/actor-lora-v2` (private; `deploy/fetch_assets.sh` downloads it), or retrain from the 14 hand-built fish (exact command in the VLM README) |
 | Meshy API key (≈ 30 credits per fish) | – | your own account; never commit it |
 | Trained RL checkpoints, wandb logs | – | produced by the scripts; the four BLM+IL prey policies used by the ROV case study are shipped |
 

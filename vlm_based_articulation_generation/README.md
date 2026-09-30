@@ -361,7 +361,7 @@ gradient checkpointing, `device_map="auto"`). The trainer is a plain AdamW loop 
 | **Blender 5.0.1 exactly** | official tarball. 4.x and 5.1 change the `bpy`/USD API used here (checked at first use). Its bundled python3.11 provides `pxr` (USD) and is the interpreter for the export chain. Needs a working EEVEE/GL context for renders (`blender -b` on a headless box needs EGL/OpenGL). |
 | **GPU ≥ 64 GB** | Qwen3-VL-32B-Instruct bf16 = 63 GB. Actor + critic share one instance. The released run used an RTX PRO 6000 (96 GB). |
 | **Qwen3-VL-32B-Instruct** | `python scripts/download_qwen3_vl.py --output models/Qwen3-VL-32B-Instruct` (HF `Qwen/Qwen3-VL-32B-Instruct`) |
-| **Actor LoRA** | not in git (547 MB). It is **not on HF**: copy `actor_lora_v2` into `checkpoints/` from the authors, or **retrain** (§5). Without it the actor is the pretrained model (`actor_meta.finetuned=false`). |
+| **Actor LoRA** | not in git (547 MB). On Hugging Face (private model repo, needs `hf auth login`): `hf download video2swimfish/actor-lora-v2 --local-dir checkpoints/actor_lora_v2` (done by `deploy/fetch_assets.sh`), or **retrain** (§5). Without it the actor is the pretrained model (`actor_meta.finetuned=false`). |
 | **Videos + released assets** | HF dataset `https://huggingface.co/datasets/video2swimfish/video2swimfish-dataset` (raw videos under `data/raw_videos/<species>/`, finished USD assets under `data/usd_assets/`). Put videos in `raw_datasets/<species>/`. Species dir must be lowercase without spaces (`deploy/make_species_dir.py`). |
 | **Meshy API** | key in `MESHY_API_KEY_FILE`; **30 credits per fish** (41 trout ≈ 1230). `deploy/preflight.py` reads the balance (free). |
 | Isaac Sim 5.1 | **optional**; only the FEM cook and phase D. |
